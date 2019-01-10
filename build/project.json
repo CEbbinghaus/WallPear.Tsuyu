@@ -1,0 +1,16 @@
+{
+  "file": "index.html",
+  "preview": "",
+  "general": {
+    "supportsaudioprocessing": true,
+    "properties": {
+      "test": {
+				"order" : 0,
+				"text" : "Color",
+				"type" : "color"
+      }
+    }
+  },
+  "title": "My Hero Academia Visualizer",
+  "type": "web"
+}

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "outDir": "./build/resources/InternalJS",
+    "module": "umd",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "allowUnreachableCode": false,
+    "sourceMap": false,
+    "lib": ["es2016", "dom"]
+  },
+  "include": ["./src/**/*.ts"]
+}
