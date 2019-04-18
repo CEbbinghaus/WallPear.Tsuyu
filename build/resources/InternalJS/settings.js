@@ -38,8 +38,16 @@ var __extends = (this && this.__extends) || (function () {
     })(PropertyType = exports.PropertyType || (exports.PropertyType = {}));
     var WallpaperSettings = (function () {
         function WallpaperSettings() {
+            this.moveCircle = false;
+            this.roundLines = true;
             this.size = sampleSize.half;
-            this.height = 100;
+            this.height = 200;
+            this.lineWidth = 20;
+            this.color = "#cfef94";
+            this.rgb = false;
+            this.rgbSpeed = 30;
+            this.glow = true;
+            this.glowSize = 10;
         }
         return WallpaperSettings;
     }());
@@ -54,9 +62,13 @@ var __extends = (this && this.__extends) || (function () {
             var _this = this;
             window.wallpaperPropertyListener = {
                 applyUserProperties: function (properties) {
+                    if (properties["toggle"]) {
+                        document.getElementById("img").style.display = properties["toggle"].value ? "block" : "none";
+                    }
                     for (var key in properties) {
                         _this.assignProperty(key, properties[key]);
                     }
+                    window.reload();
                 }
             };
         };
@@ -84,6 +96,7 @@ var __extends = (this && this.__extends) || (function () {
                 var c = property.value;
                 return "#" + c.split(" ").map(function (v) { var c = (parseFloat(v) * 255 | 0).toString(16); return c.length < 2 ? "0" + c : c; }).join("");
         }
+        return property.value;
     }
     exports.HandleProperties = HandleProperties;
 });

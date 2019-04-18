@@ -1,16 +1,117 @@
 {
-  "file": "index.html",
-  "preview": "",
-  "general": {
-    "supportsaudioprocessing": true,
-    "properties": {
-      "test": {
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"description" : 
+			{
 				"order" : 0,
-				"text" : "Color",
-				"type" : "color"
-      }
-    }
-  },
-  "title": "My Hero Academia Visualizer",
-  "type": "web"
+				"text" : "<h4>Tsuyu Asui Audio Visualizer<br><small>Credit for the Wallpaper goes to <a href=\"https://steamcommunity.com/id/MrPaperBagHead/myworkshopfiles/\">Mr.PaperBagHead</a>. The Original wallpaper can be found <a href=\"https://steamcommunity.com/sharedfiles/filedetails/?id=1604217186\">here</a> with a Timelapse of the project <a href=\"https://www.youtube.com/watch?v=KOwmfrYt0vc\">here</a>. <br><br> <h3><a href=\"mailto:wallpear.cebbinghaus@gmail.com\">Contact Me</h3></a><img src=\"https://media.tenor.com/images/dc545e5a0f93c9b2bf1d4f0af54ebbff/tenor.gif\"><br><br>The Entire Project is Written in TypeScript and the source code can be found <a href=\"https://github.com/CEbbinghaus/WallPear.Tsuyu\">here</a>. If you like what you see Check out some of my other <a href=\"https://steamcommunity.com/id/CEbbinghaus/myworkshopfiles/\">Projects</a>.</small></h4>",
+				"type" : "text"
+			},
+			"color" : 
+			{
+				"order" : 5,
+				"text" : "color",
+				"type" : "color",
+				"value" : "#cfef94"
+			},
+			"glow" : 
+			{
+				"order" : 8,
+				"text" : "glow",
+				"type" : "bool",
+				"value" : true
+			},
+			"glowSize" : 
+			{
+				"condition" : "glow.value",
+				"max" : 40,
+				"min" : 0,
+				"order" : 9,
+				"text" : "glowSize",
+				"type" : "slider",
+				"value" : 10
+			},
+			"height" : 
+			{
+				"max" : 100,
+				"min" : 0,
+				"order" : 3,
+				"text" : "height",
+				"type" : "slider",
+				"value" : 200
+			},
+			"lineWidth" : 
+			{
+				"max" : 24,
+				"min" : 0,
+				"order" : 4,
+				"text" : "lineWidth",
+				"type" : "slider",
+				"value" : 20
+			},
+			"rgb" : 
+			{
+				"order" : 6,
+				"text" : "rgb",
+				"type" : "bool",
+				"value" : false
+			},
+			"rgbSpeed" : 
+			{
+				"condition" : "rgb.value",
+				"max" : 100,
+				"min" : 0,
+				"order" : 7,
+				"text" : "rgbSpeed",
+				"type" : "slider",
+				"value" : 30
+			},
+			"roundLines" : 
+			{
+				"order" : 1,
+				"text" : "roundLines",
+				"type" : "bool",
+				"value" : true
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0 0 0"
+      },
+      "toggle" : 
+			{
+				"order" : -1,
+				"text" : "Credits",
+				"type" : "bool",
+				"value" : false
+			},
+		"size" : 
+			{
+				"options" : 
+				[
+					{
+						"label" : "Full",
+						"value" : 0
+					},
+					{
+						"label" : "Half",
+						"value" : 1
+					}
+				],
+				"order" : 2,
+				"text" : "size",
+				"type" : "combo"
+			}
+		},
+		"supportsaudioprocessing" : true
+	},
+	"tags" : [ "Unspecified" ],
+	"title" : "My Hero Academia Visualizer",
+	"type" : "web",
+	"visibility" : "public"
 }

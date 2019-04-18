@@ -1,3 +1,5 @@
+import { getEnabledCategories } from "trace_events";
+
 export enum sampleSize {
   full,
   half
@@ -19,8 +21,16 @@ interface setting{
   value: any;
 }
 class WallpaperSettings{
+  moveCircle: boolean = false;
+  roundLines: boolean = true;
   size: sampleSize = sampleSize.half;
-  height: number = 100;
+  height: number = 200;
+  lineWidth: number = 20;
+  color: string = "#cfef94"
+  rgb: boolean = false;
+  rgbSpeed: number = 30;
+  glow: boolean = true;
+  glowSize: number = 10;
   [index: string]: any;
 }
 export class Settings extends WallpaperSettings{
@@ -32,10 +42,15 @@ export class Settings extends WallpaperSettings{
     //@ts-ignore
       window.wallpaperPropertyListener = {
         applyUserProperties: (properties: object) => {
+          if(properties["toggle"]){
+            document.getElementById("img").style.display = properties["toggle"].value ? "block" : "none";
+          }
           for(let key in properties){
             //@ts-ignore
             this.assignProperty(key, properties[key])
           }
+          //@ts-ignore
+          window.reload();
         }
       }
   }
@@ -62,4 +77,5 @@ export function HandleProperties(property: setting){
       //@ts-ignore
       return "#" + c.split(" ").map(v => { let c = (parseFloat(v) * 255 | 0).toString(16); return c.length < 2 ? "0" + c : c }).join("");
   }
+  return property.value;
 }

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "./build/resources/InternalJS",
     "module": "umd",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "removeComments": true,
     "allowUnreachableCode": false,
     "sourceMap": false,
